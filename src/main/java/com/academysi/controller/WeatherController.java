@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.academysi.dto.GeoCodingResponseDto;
 import com.academysi.dto.WeatherPostDto;
 import com.academysi.dto.WeatherResponseDto;
+import com.academysi.jwt.JWTTokenNeeded;
 import com.academysi.model.Weather;
 import com.academysi.service.GeoCodingService;
 import com.academysi.service.WeatherService;
@@ -23,6 +24,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 
+@JWTTokenNeeded
 @RestController
 @Path("/weather")
 public class WeatherController {
